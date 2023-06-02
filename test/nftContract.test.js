@@ -5,7 +5,7 @@ const { developmentChains } = require("../helper-hardhat-config");
 !developmentChains.includes(network.name)
   ? describe.skip
   : describe("Mint Nft Unit Test", () => {
-      let deployer, accounts, bikeRenting;
+      let deployer, accounts;
       beforeEach(async () => {
         accounts = await ethers.getSigners();
         deployer = accounts[0];
@@ -15,7 +15,6 @@ const { developmentChains } = require("../helper-hardhat-config");
 
       describe("MintNft", () => {
         const tokenId = 1;
-        const price = 1;
         const name = "myNft";
         const description = "This is my Nft";
         const tokenURI = "https://example.com/nft";
