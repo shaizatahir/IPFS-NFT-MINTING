@@ -129,3 +129,7 @@ contract NftContract is ERC721URIStorage {
     // }
 
 }
+
+// Nft Contract deployed at 0x5FbDB2315678afecb367f032d93F642f64180aa3 Localhost
+
+// deployed at mumbai testnet: 0x96c883C9A201F16166019C95e06651bd976f22D3

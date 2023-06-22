@@ -9,6 +9,7 @@ require("dotenv").config();
 const POLYGONSCAN_API_KEY = process.env.POLYGONSCAN_API_KEY;
 const PRIVATE_KEY = process.env.PRIVATE_KEY;
 const MUMBAI_RPC_URL = process.env.MUMBAI_RPC_URL;
+const ALCHEMY_API_KEY = process.env.ALCHEMY_API_KEY;
 
 module.exports = {
   defaultNetwork: "hardhat",
@@ -26,6 +27,9 @@ module.exports = {
       blockConfirmation: 6,
       url: MUMBAI_RPC_URL,
       accounts: [PRIVATE_KEY],
+      forking: {
+        url: `https://polygon-mumbai.g.alchemy.com/v2/${ALCHEMY_API_KEY}`, 
+      },
     },
   },
   etherscan: {
